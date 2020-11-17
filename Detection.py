@@ -24,3 +24,28 @@ implot=plt.imshow(gray)
 plt.show()
 implot=plt.imshow(edged)
 plt.show()
+
+
+
+for c in cnts:
+ 
+ peri = cv2.arcLength(c, True)
+ approx = cv2.approxPolyDP(c, 0.018 * peri, True)
+ 
+ 
+ if len(approx) == 4:
+  screenCnt = approx
+  break
+if screenCnt is None:
+  detected = 0
+  print ("No contour detected")
+else:
+  detected = 1
+
+if detected == 1:
+ cv2.drawContours(img, [screenCnt], -1, (0, 255, 0), 3)
+
+imgplot= plt.imshow(img)
+plt.show()
+imgplot= plt.imshow(edged)
+plt.show()
