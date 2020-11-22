@@ -26,7 +26,7 @@ implot=plt.imshow(edged)
 plt.show()
 
 
-
+#contour detection or number plate detectiin
 for c in cnts:
  
  peri = cv2.arcLength(c, True)
