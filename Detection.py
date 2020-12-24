@@ -49,3 +49,5 @@ imgplot= plt.imshow(img)
 plt.show()
 imgplot= plt.imshow(edged)
 plt.show()
+
+#Cropped the number plate
