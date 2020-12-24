@@ -51,3 +51,9 @@ imgplot= plt.imshow(edged)
 plt.show()
 
 #Cropped the number plate
+
+mask = np.zeros(gray.shape,np.uint8)
+new_image = cv2.drawContours(mask,[screenCnt],0,255,-1,)
+new_image = cv2.bitwise_and(img,img,mask=mask)
+imgplot= plt.imshow(new_image)
+
