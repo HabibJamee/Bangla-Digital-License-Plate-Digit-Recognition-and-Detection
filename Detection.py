@@ -57,3 +57,6 @@ new_image = cv2.drawContours(mask,[screenCnt],0,255,-1,)
 new_image = cv2.bitwise_and(img,img,mask=mask)
 imgplot= plt.imshow(new_image)
 plt.show()
+
+
+#Erase other parts
