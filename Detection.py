@@ -60,3 +60,11 @@ plt.show()
 
 
 #Erase other parts
+
+(x, y) = np.where(mask == 255)
+(topx, topy) = (np.min(x), np.min(y))
+(bottomx, bottomy) = (np.max(x), np.max(y))
+Cropped = gray[topx:bottomx+1, topy:bottomy+1]
+imgplot= plt.imshow(Cropped)
+plt.show()
+
