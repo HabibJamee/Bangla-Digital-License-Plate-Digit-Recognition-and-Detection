@@ -73,4 +73,10 @@ Cropped = img[topx:bottomx+1, topy:bottomy+1]
 imgplot= plt.imshow(Cropped)
 plt.show()
 
+#save the image
+
+Cropped = cv2.resize(Cropped, (620,480) )
+
+cv2.imwrite( 'cropped1.png', Cropped )
+
 
