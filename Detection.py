@@ -68,3 +68,9 @@ Cropped = gray[topx:bottomx+1, topy:bottomy+1]
 imgplot= plt.imshow(Cropped)
 plt.show()
 
+#convert image
+Cropped = img[topx:bottomx+1, topy:bottomy+1]
+imgplot= plt.imshow(Cropped)
+plt.show()
+
+
